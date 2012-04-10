@@ -1,0 +1,19 @@
+var config = {};
+
+config.web = {
+  port: process.env.WEB_PORT || 8989
+}
+
+config.database = {
+  host: 'HOST',
+  database: 'DATABASE',
+  user: 'USER',
+  password: 'PASSWORD'
+}
+
+config.session = {
+  secret: 'THIS SHOULD BE VERY LONG AND VERY SECRET',
+  key: 'commonroom'
+}
+
+module.exports = config;

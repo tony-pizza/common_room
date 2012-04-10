@@ -1,0 +1,36 @@
+h1 Welcome
+if loggedIn
+  p Logged in
+  p
+    a(href="/logout") Log out
+  p
+    a(href="/rooms/new") New room
+
+  if rooms.length > 0
+    p
+      h3 My rooms:
+      ul
+      each room in rooms
+        if room.user_id == session.user_id
+          li
+            a(href='/rooms/'+room.slug)= room.name
+    p
+      h3 Other rooms:
+      ul
+      each room in rooms
+        if room.user_id != session.user_id
+          li
+            a(href='/rooms/'+room.slug)= room.name
+            |  (created by #{room.user_name})
+else
+  p You're not logged in.
+  p Log in below or 
+    a(href="/signup") sign up.
+  form(action="/login", method="post")
+    p
+      input(type="text", name="username", placeholder="username")
+    p
+      input(type="password", name="password", placeholder="password")
+    p
+      input(type="submit", value="Log in")
+  // a(href="/signup") Sign up
