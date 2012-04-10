@@ -1,0 +1,23 @@
+{
+  "author": "Ian Pearce (http://ianpearce.org)",
+  "name": "common_room",
+  "description": "A Campfire-like multi-room chat service in Node.js using NowJS and MySQL",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peeinears/common_room.git"
+  },
+  "dependencies": {
+    "express": "2.5.x",
+    "jade": "0.22.x",
+    "bcrypt": "0.5.x",
+    "crypto": "0.0.x",
+    "mysql": "0.9.x",
+    "now": "0.8.x"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
